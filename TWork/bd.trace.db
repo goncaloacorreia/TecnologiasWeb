@@ -1,0 +1,54 @@
+2021-02-05 16:40:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT NOT NULL, PRODUCT VARCHAR(255) NOT NULL, SIZE VARCHAR(255), UNITS VARCHAR(255), CLIENT_ID BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id bigint not null, product varchar(255) not null, size varchar(255), units varchar(255), client_id bigint, primary key (id)) [42001-200]
+2021-02-05 16:40:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKBB5WAKYPPWQMFUHP53P3JVS5U FOREIGN KEY (CLIENT_ID) REFERENCES CLIENT"; expected "identifier"; SQL statement:
+alter table order add constraint FKbb5wakyppwqmfuhp53p3jvs5u foreign key (client_id) references client [42001-200]
+2021-02-05 16:48:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT NOT NULL, PRODUCT VARCHAR(255) NOT NULL, SIZE VARCHAR(255), UNITS VARCHAR(255), CLIENT_ID BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id bigint not null, product varchar(255) not null, size varchar(255), units varchar(255), client_id bigint, primary key (id)) [42001-200]
+2021-02-05 16:48:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKBB5WAKYPPWQMFUHP53P3JVS5U FOREIGN KEY (CLIENT_ID) REFERENCES CLIENT"; expected "identifier"; SQL statement:
+alter table order add constraint FKbb5wakyppwqmfuhp53p3jvs5u foreign key (client_id) references client [42001-200]
+2021-02-07 01:27:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESC VARCHAR(255)": "STRINGDECODE('A \u00fanica maneira de descrever o Travis Scott Air Jordan 4 Retros corretamente seria usar o seu pr\u00f3prio ad... (339)"; SQL statement:
+insert into product (brand, desc, name, price, release_date, stock_limit, id) values (?, ?, ?, ?, ?, ?, ?) [22001-200]
+2021-02-07 04:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESC VARCHAR(255)": "STRINGDECODE('Talvez os t\u00e9nis mais ic\u00f3nicos de todos os tempos, estes originais \""Chicago\"" Colorway s\u00e3o o diaman... (264)"; SQL statement:
+insert into product (brand, desc, name, price, release_date, stock_limit, id) values (?, ?, ?, ?, ?, ?, ?) [22001-200]
+2021-02-07 22:16:41 database: close
+org.h2.message.DbException: IO Exception: "Closing" [90028-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.mvstore.db.MVTableEngine$Store.close(MVTableEngine.java:421)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1545)
+	at org.h2.engine.Database.closeImpl(Database.java:1454)
+	at org.h2.engine.Database.close(Database.java:1373)
+	at org.h2.engine.OnExitDatabaseCloser.onShutdown(OnExitDatabaseCloser.java:85)
+	at org.h2.engine.OnExitDatabaseCloser.run(OnExitDatabaseCloser.java:114)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "Closing" [90028-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 7 more
+Caused by: java.lang.IllegalStateException: File corrupt reading chunk at position 49152 [1.4.200/6]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.Chunk.readChunkHeader(Chunk.java:168)
+	at org.h2.mvstore.MVStore.moveChunk(MVStore.java:1916)
+	at org.h2.mvstore.MVStore.compactMoveChunks(MVStore.java:1839)
+	at org.h2.mvstore.MVStore.compactMoveChunks(MVStore.java:1772)
+	at org.h2.mvstore.MVStore.compactMoveChunks(MVStore.java:1753)
+	at org.h2.mvstore.MVStore.compactFile(MVStore.java:1970)
+	at org.h2.mvstore.MVStore.closeStore(MVStore.java:1170)
+	at org.h2.mvstore.MVStore.close(MVStore.java:1133)
+	at org.h2.mvstore.db.MVTableEngine$Store.close(MVTableEngine.java:404)
+	... 5 more
+Caused by: java.lang.IllegalStateException: Error parsing the value 0name:openTransactionsname:table.7 [1.4.200/6]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.DataUtils.readHexInt(DataUtils.java:1098)
+	at org.h2.mvstore.Chunk.fromString(Chunk.java:230)
+	at org.h2.mvstore.Chunk.readChunkHeader(Chunk.java:163)
+	... 13 more
+Caused by: java.lang.NumberFormatException: For input string: "0name:openTransactionsname:table.7" under radix 16
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Long.parseLong(Long.java:707)
+	at org.h2.mvstore.DataUtils.readHexInt(DataUtils.java:1096)
+	... 15 more

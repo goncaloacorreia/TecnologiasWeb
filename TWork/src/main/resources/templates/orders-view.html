@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        table, th, td {
+              border: 1px solid black;
+            }
+        .enc {
+            background-color: aquamarine;
+            border: 5px solid gray;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height:100%;
+        }
+        body {
+            background-image: url("../imgs/back.jpg");
+            max-width: 1028px;
+        }
+        .about{
+            width: 100%;
+            background-color: white;
+            clear:both;
+            margin-top: 20px;
+            position: relative;
+            bottom: 0;
+        }
+    </style>
+    <title>Nice Kicks! | Sneakers Store</title>
+</head>
+<body>
+	
+    <div class = "enc">
+        <p>Histórico de encomendas:</p>
+        
+        <table>
+            <tr th:each="order: ${orderList}">
+                <td th:text="${order.id}"/>
+                <td th:text="'Name: ' + ${order.product}"/>
+                <td th:text="'Size: ' + ${order.size}"/>
+                <td th:text="'Units: ' + ${order.units}"/>
+            </tr>
+        </table>
+
+        <a href = "index.html"><p>Voltar à página inicial</p></a>
+        
+    </div>
+
+    <div class = about>
+        <a href = "#"><h1>About this page</h1></a>
+    </div>
+
+    
+    
+</body>
+</html>

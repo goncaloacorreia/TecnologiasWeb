@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Nice Kicks! | Sneakers Store</title>
+    <style>
+
+        .login {
+            background-color: aquamarine;
+            border: 5px solid gray;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height:100%;
+        }
+        body {
+            background-image: url("../imgs/back.jpg");
+            max-width: 1028px;
+        
+        }
+        .about{
+            width: 100%;
+            background-color: white;
+            clear:both;
+            margin-top: 20px;
+            position: relative;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class = "login">
+        <div class = "loginpad">
+            <h1>Login:</h1>
+            <form th:action="@{/login}" method="post">  
+                <div><label> User Name : <input type="text" name="username"/> </label></div>
+                <div><label> Password: <input type="password" name="password"/> </label></div>
+                <div><input type="submit" value="Sign In"/></div>
+            </form>
+        
+
+            <h1>Registar:</h1>
+            <p>Ainda não possui conta no nosso website ? Crie já a sua clicando <a href = "/registo.html">aqui</a>!</p>
+        </div> 
+    </div>
+
+    <div class = about>
+        <a href = "#"><h1>About this page</h1></a>
+    </div>

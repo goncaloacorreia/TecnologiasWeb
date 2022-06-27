@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Nice Kicks! | Sneakers Store</title>
+</head>
+
+<body>
+
+    <div class="cabeçalho">
+        <div buttons>
+            <a href = "login.html"><button id = "loginb" type = "button">Login</button></a>
+            <a href = "orders.html"><button id = "cartb" type = "button"><img src="./imgs/cart.png" id = "buttonimg"></button></a>
+        </div>
+            <a href = "index.html"><img class="logo" src="./imgs/logo.jpeg"></a>
+        <div id ="search">
+            <form method='post' th:action='@{/index}'>
+                <input type="text" name = "search" placeholder="Pesquisar..." id = "barra"/>
+                <button type="submit" id= "button"><img src="./imgs/lupa.png" id = "buttonimg"></button>
+                <a href= "advanced_search.html" id ="pa">Pesquisa Avançada</a>
+            </form>
+        </div>
+    </div>
+
+    <div class = "produtos">
+        <div class = product1>
+            <form method='post' th:action='@{/productlist}'>
+                    <input type = "image" class ="p" src="./imgs/shoe6.jpeg" alt = "submit">
+                    <h2>Nike Air Force 1</h2>
+                    <p>Destaca-te onde quer que vás com as Nike Air Force 1 Low! Um ícone em 1982, que foi renovado, foram as primeiras sapatilhas da Nike a contar com uma Air Sole unit completa na entressola. Populares no mundo do hip hop, esta versão é feita com uma parte superior em couro branco, para te proporcionar conforto. Assentam na lendária Air Sole e numa sola de borracha para maior tração, e são finalizadas com o Swoosh em branco nas laterais.</p>
+                    <h1>110,00€</h1> 
+                    <input type="hidden" value="Nike Air Force 1" name="pname"/>
+            </form>
+        </div>
+
+        <span class="divider"></span>
+
+        <div class = product2>
+            <form method='post' th:action='@{/productlist}'>
+                    <input type = "image" class ="p" src="./imgs/shoe7.jpg" alt = "submit">
+                    <h2>Balenciaga Triple S White</h2>
+                    <p>Quanto mais corpulento, melhor. Estes icônicos ténis Triple S White vêm num tom de branco que combina com todos os seus looks atléticos. Conforto encontra estilo, graças a Balenciaga. Apresentando um detalhe frontal com atacadores, um dedo do pé redondo, um patch de logotipo na língua, uma sola Triple S exclusiva, um logotipo impresso na lateral e um detalhe de tamanho no dedo do pé.</p>
+                    <h1>889,99€</h1> 
+                    <input type="hidden" value="Balenciaga Triple S White" name="pname"/>
+            </form>
+        </div>
+
+        <span class="divider"></span>
+
+        <div class = product3>
+            <form method='post' th:action='@{/productlist}'>
+                    <input type = "image" class ="p" src="./imgs/shoe8.jpg" alt = "submit">
+                    <h2>Nike Kobe 5 Protro Bruce Lee</h2>
+                    <p>Os Kobe 5 Protro "Bruce Lee" recordam os mestres com o lançamento da paleta de cores clássica de 2010. A parte superior em preto e amarelo e os arranhões em vermelho remetem para elementos memoráveis da carreira emblemática de Lee. Com um perfil mais baixo, mais elegante e um look mais veloz do que nunca, as Protro contam com uma unidade Zoom Air grande e flexível, espuma reativa e tração em tamanho reduzido para garantir uma excelente sensação em campo.</p>
+                    <h1>174,99€</h1> 
+                    <input type="hidden" value="Nike Kobe 5 Protro Bruce Lee" name="pname"/>
+            </form>
+        </div>
+
+        <span class="divider"></span>
+
+        <div class = product4>
+            <form method='post' th:action='@{/productlist}'>
+                    <input type = "image" class ="p" src="./imgs/shoe9.png" alt = "submit">
+                    <h2>Vans Kyle Walker</h2>
+                    <p>Os novos ténis Kyle Walker Pro, o icónico modelo introdutório do novato profissional Kyle Walker, têm partes superiores em lona e camurça resistentes. As palmilhas reforçadas proporcionam um amortecimento e proteção contra impactos superiores. Por sua vez, a revolucionária estrutura Wafflecup oferece o apoio de uma sola sem sacrificar a aderência ou a sensibilidade na prancha dos ténis vulcanizados tradicionais.</p>
+                    <h1>95,00€</h1> 
+                    <input type="hidden" value="Vans Kyle Walker" name="pname"/>
+            </form>
+        </div>
+
+        <span class="divider"></span>
+
+        <div class = product5>
+            <form method='post' th:action='@{/productlist}'>
+                    <input type = "image" class ="p" src="./imgs/shoe10.jpeg" alt = "submit">
+                    <h2>New Balance 850 OG</h2>
+                    <p>Os New Balance 850 são os filhos rebelde da marca. Lançados originalmente em 1996, foram os primeiros ténis da New Balance sem o “N” na lateral. Celebrando o passado e olhando para o futuro, os 850 são um clássico dos anos 90 e objetos de desejo para os fãs da New Balance. Relançado com as mesmas características dos originais, misturam o “cool” da nova geração ao design característico de 1996. O cabedal foi elaborado com sobreposições de materiais premium e tecnologia de amortecimento ABZORB na entressola que garantem muito mais conforto e maciez.</p>
+                    <h1>99,99€</h1> 
+                    <input type="hidden" value="New Balance 850 OG" name="pname"/>
+            </form>
+        </div>
+        
+        <div class="pagination">
+           
+            <a href="index.html">&laquo;</a>
+            <a href="index.html">1</a>
+            <a class = "active" href="index2.html">2</a>
+            <a href="index2.html">&raquo;</a>
+            
+        </div>
+    
+    </div>
+
+    <div class= "categorias">
+        <p><h1>Categorias:</h1></p>
+        
+        <form method='post' th:action='@{/index1}'>
+
+            <input type="radio" name="marca" value="Jordan">
+            <label for="jordan">Air Jordan</label><br>
+
+            <input type="radio" name="marca" value="Adidas">
+            <label for="adidas">Adidas</label><br> 
+
+            <input type="radio" name="marca" value="Nike">
+            <label for="nike">Nike</label><br>
+
+            <input type="radio" name="marca" value="Puma">
+            <label for="puma">Puma</label><br>
+
+            <input type="radio" name="marca" value="Vans">
+            <label for="vans">Vans</label><br>
+
+            <input type="radio" name="marca" value="New Balance">
+            <label for="newbalance">New Balance</label><br>
+
+            <input type="radio" name="marca" value="Balenciaga">
+            <label for="balenciaga">Balenciaga</label><br><br>
+
+            <p></p>
+            
+            <button type="submit">Pesquisar!</button>
+
+        </form>
+    </div>
+
+    <span class="divider"></span>
+
+    <div class = about>
+        <a href = "#"><h1>About this page</h1></a>
+    </div>
+
+</body>
+
+</html>

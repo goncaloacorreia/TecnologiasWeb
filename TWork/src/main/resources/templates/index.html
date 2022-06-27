@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Nice Kicks! | Sneakers Store</title>
+</head>
+
+<body>
+
+    <div class="cabeçalho">
+        <div buttons>
+            <a href = "login.html"><button id = "loginb" type = "button">Login</button></a>
+            <a href = "orders.html"><button id = "cartb" type = "button"><img src="./imgs/cart.png" id = "buttonimg"></button></a>
+        </div>
+            <a href = "index.html"><img class="logo" src="./imgs/logo.jpeg"></a>
+        <div id ="search">
+            <form method='post' th:action='@{/index}'>
+                <input type="text" name = "search" placeholder="Pesquisar..." id = "barra"/>
+                <button type="submit" id= "button"><img src="./imgs/lupa.png" id = "buttonimg"></button>
+                <a href= "advanced_search.html" id ="pa">Pesquisa Avançada</a>
+            </form>
+        </div>
+    </div>
+
+    <div class = "produtos">
+        <div class = product1>
+            <form method='post' th:action='@{/productlist}'>
+                    <input type = "image" class ="p" src="./imgs/shoe1.png" alt = "submit">
+                    <h2>Air Jordan 1 Retro High Chicago</h2>
+                    <p>Talvez os ténis mais icónicos de todos os tempos, estes originais "Chicago" Colorway são o diamante de qualquer coleção de tênis. Tornados famosos em 1985 por Michael Jordan, o sapato resistiu ao passar do tempo, tornando-se o mais famoso Colorway da Air Jordan 1.</p>
+                    <h1>800.99€</h1> 
+                    <input type="hidden" value="Air Jordan 1 Retro High Chicago" name="pname"/>
+            </form>
+        </div>
+
+        <span class="divider"></span>
+
+        <div class = product2>
+            <form method='post' th:action='@{/productlist}'>
+                    <input type = "image" class ="p" src="./imgs/shoe2.jpg" alt = "submit">
+                    <h2>Air Jordan 4 Retro Travis Scott Cactus Jack</h2>
+                    <p>A única maneira de descrever o Travis Scott Air Jordan 4 Retros corretamente seria usar o seu próprio adlib: La Flame. Esses Jordan 4s foram feitos em colaboração com o rapper Travis Scott e apelidados de edição “Cactus Jack”. Semelhante em design ao famoso par Eminem, estes apresentam um tom mais claro de camurça azul na parte superior.</p>
+                    <h1>849,99€</h1> 
+                    <input type="hidden" value="Air Jordan 4 Retro Travis Scott Cactus Jack" name="pname"/>
+            </form>
+        </div>
+
+        <span class="divider"></span>
+
+        <div class = product3>
+            <form method='post' th:action='@{/productlist}'>
+                    <input type = "image" class ="p" src="./imgs/shoe3.jpg" alt = "submit">
+                    <h2>Nike Airmax 97</h2>
+                    <p>Apresentando o mesmo design ondulado das originais inspiradas nos comboios de alta velocidade japoneses, as Nike Air Max 97 permitem impulsionar o teu estilo à máxima velocidade. Pegando na revolucionária unidade Nike Air a todo o comprimento que revolucionou o mundo do running e acrescentando cores frescas e detalhes revigorantes, estas sapatilhas garantem conforto de primeira classe.</p>
+                    <h1>179,99€</h1> 
+                    <input type="hidden" value="Nike Airmax 97" name="pname"/>
+            </form>
+        </div>
+
+        <span class="divider"></span>
+
+        <div class = product4>
+            <form method='post' th:action='@{/productlist}'>
+                    <input type = "image" class ="p" src="./imgs/shoe4.jpg" alt = "submit">
+                    <h2>Yeezy Boost 700</h2>
+                    <p>Os Yeezy 700 fizeram a sua estreia durante a recente tendência de “daddy shoe”, mas também apresenta um dos melhores designs até agora da linha Yeezy da Adidas devido à mistura de materiais na parte superior, que fica em cima de uma entressola acolchoada robusta.</p>
+                    <h1>450,99€</h1> 
+                    <input type="hidden" value="Yeezy Boost 700" name="pname"/>
+            </form>
+        </div>
+
+        <span class="divider"></span>
+
+        <div class = product5>
+            <form method='post' th:action='@{/productlist}'>
+                    <input type = "image" class ="p" src="./imgs/shoe5.jpg" alt = "submit">
+                    <h2>PUMA RS-Fast</h2>
+                    <p>Mais rápido e fresco do que qualquer um de nossos pisos RS. O RS-Fast está a reinventar o estilo de rua com um design progressivo que combina dicas do início dos anos 2000 e vibrações futuristas. Esta versão possui uma paleta de cores inovadora.</p>
+                    <h1>110,00€</h1> 
+                    <input type="hidden" value="PUMA RS-Fast" name="pname"/>
+            </form>
+        </div>
+        
+        <div class="pagination">
+            <a href="index.html">&laquo;</a>
+            <a class = "active" href="index.html">1</a>
+            <a href="index2.html">2</a>
+            <a href="index2.html">&raquo;</a>
+        </div>
+    
+    </div>
+
+    <div class= "categorias">
+        <p><h1>Categorias:</h1></p>
+        
+        <form method='post' th:action='@{/index1}'>
+
+            <input type="radio" name="marca" value="Jordan">
+            <label for="jordan">Air Jordan</label><br>
+
+            <input type="radio" name="marca" value="Adidas">
+            <label for="adidas">Adidas</label><br> 
+
+            <input type="radio" name="marca" value="Nike">
+            <label for="nike">Nike</label><br>
+
+            <input type="radio" name="marca" value="Puma">
+            <label for="puma">Puma</label><br>
+
+            <input type="radio" name="marca" value="Vans">
+            <label for="vans">Vans</label><br>
+
+            <input type="radio" name="marca" value="New Balance">
+            <label for="newbalance">New Balance</label><br>
+
+            <input type="radio" name="marca" value="Balenciaga">
+            <label for="balenciaga">Balenciaga</label><br><br>
+               
+            <p></p>
+            
+            <button type="submit">Pesquisar!</button>
+
+        </form>
+    </div>
+
+    <span class="divider"></span>
+
+    <div class = about>
+        <a href = "#"><h1>About this page</h1></a>
+    </div>
+
+</body>
+
+</html>

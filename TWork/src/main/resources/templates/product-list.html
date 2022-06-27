@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Nice Kicks! | Sneakers Store</title>
+</head>
+
+<body>
+
+    <div class="cabeçalho">
+        <div buttons>
+            <a href = "login.html"><button id = "loginb" type = "button">Login</button></a>
+            <a href = "orders.html"><button id = "cartb" type = "button"><img src="./imgs/cart.png" id = "buttonimg"></button></a>
+        </div>
+            <a href = "index.html"><img class="logo" src="./imgs/logo.jpeg"></a>
+        <div id ="search">
+            <form method='post' th:action='@{/index}'>
+                <input type="text" name = "search" placeholder="Pesquisar..." id = "barra"/>
+                <button type="submit" id= "button"><img src="./imgs/lupa.png" id = "buttonimg"></button>
+                <a href= "advanced_search.html" id ="pa">Pesquisa Avançada</a>
+            </form>
+        </div>
+    </div>
+
+    <div class = "produtosv">
+        
+        <table>
+            <tr th:each="product: ${produto}">
+                <form method='post' th:action='@{/productlist}'>
+                    <td><input type = "image" class ="p" src="./imgs/shoe1.png" alt = "submit"></td>    
+                    <td><h2 th:text="${product.name}" name = "pname" th:value ="${product.name}"></h2>
+                    <p th:text="${product.desc}"></p>
+                    <h1 th:text="${product.price} + ' €'"></h1></td>
+                    <input type="hidden" th:value="${product.name}" name="pname"/>
+                </form>
+            </tr>
+        </table>
+       
+    </div>
+
+    <span class="divider"></span>
+
+    <div class = about>
+        <a href = "#"><h1>About this page</h1></a>
+    </div>
+
+</body>
+
+</html>

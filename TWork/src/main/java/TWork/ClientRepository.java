@@ -1,0 +1,10 @@
+package TWork;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface ClientRepository extends CrudRepository<Client, Long> {
+
+	Client findOneByUsername(String username);
+	
+	Client findById(long id);
+}

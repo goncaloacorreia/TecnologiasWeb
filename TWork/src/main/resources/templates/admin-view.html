@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        table, th, td {
+              border: 1px solid black;
+            }
+    </style>
+    <title>Nice Kicks! | Sneakers Store</title>
+</head>
+<body>
+    <p th:text="'Novo produto adicionado: ' + ${name}"/>
+
+    <p>Lista de produtos atualizada:</p>
+    
+    <table>
+        <tr th:each="product: ${productList}">
+            <td th:text="'ID: ' + ${product.id}"/>
+            <td th:text="'Name: ' + ${product.name}"/>
+            <td th:text="'Brand: ' + ${product.brand}"/>
+            <td th:text="'Desc: ' + ${product.desc}"/>
+            <td th:text="'Price: ' + ${product.price}"/>
+            <td th:text="'Release Date: ' + ${product.release_date}"/>
+            <td th:text="'Stock Limit: ' + ${product.stock_limit}"/>
+            <td><form th:action="@{delete}" method="post">
+                <input type="hidden" name="id" th:value="${product.id}" />
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </form></td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

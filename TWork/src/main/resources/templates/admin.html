@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Admin Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<h3>Novo Produto</h3>
+	<form method='post' th:action='@{/admin}'>
+
+		<div><label><input type="text" name="name" placeholder="Nome"/> </label></div>
+		<div><label><input type="text" name="brand" placeholder="Marca"/> </label></div>
+		<div><label><input type="textarea" name="desc" placeholder="Descrição"/></label></div>
+		<div><label><input type="text" name="price" placeholder="Preço"/></label></div>
+		<div><label><input type="text" name="release_date" placeholder="Release Date"/></label></div>
+		<div><label><input type="text" name="stock_limit" placeholder="Stock Limit"/></label></div>
+
+        <div><input type="submit" value="Submit"/></div>
+
+	</form>
+	
+	<p><h3>Ver lista de produtos listados:</h3></p>
+	<form method='post' th:action='@{/admin1}'>
+
+        <div><input type="submit" value="Visualizar"/></div>
+
+	</form>
+
+</body>
+</html>

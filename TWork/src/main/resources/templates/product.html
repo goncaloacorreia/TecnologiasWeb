@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Nice Kicks! | Sneakers Store</title>
+</head>
+
+<body>
+
+    <div class="cabeçalho">
+        <div buttons>
+            <a href = "login.html"><button id = "loginb" type = "button">Login</button></a>
+            <a href = "orders.html"><button id = "cartb" type = "button"><img src="./imgs/cart.png" id = "buttonimg"></button></a>
+        </div>
+            <a href = "index.html"><img class="logo" src="./imgs/logo.jpeg"></a>
+        <div id ="search">
+            <form method='post' th:action='@{/index}'>
+                <input type="text" name = "search" placeholder="Pesquisar..." id = "barra"/>
+                <button type="submit" id= "button"><img src="./imgs/lupa.png" id = "buttonimg"></button>
+                <a href= "advanced_search.html" id ="pa">Pesquisa Avançada</a>
+            </form>
+        </div>
+    </div>
+
+    <div class = "product">
+        <form method='post' th:action='@{/order}'>
+            <tr th:each="product: ${produto}">
+            <td><a href = "./imgs/shoe1.jpg " target="_blank"><img class ="p_img" src="./imgs/shoe1.jpg"></a>
+            <p><h2 th:text="${product.name}"></h2>
+            <p th:text="${product.desc}"></p>
+            <p><h1 th:text="${product.price} + ' €'"></h1></p></td>
+            </tr>
+            <p></p>
+            <p><h3>Portes de Entrega: Portugal - 3,50€</h3>
+                <h3>Estrangeiro - 12,50€</h3>
+            </p>
+            <p><h3>Data de Entrega - 2 a 3 dias úteis</h3></p>
+
+            <h3> Quantas unidades?
+                <select name="units">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </h3>
+
+            <h3> Tamanho:
+                <select name="size">
+                    <option>35</option>
+                    <option>36</option>
+                    <option>37</option>
+                    <option>38</option>
+                    <option>39</option>
+                    <option>40</option>
+                    <option>41</option>
+                    <option>42</option>
+                    <option>43</option>
+                    <option>44</option>
+                    <option>45</option>
+                    <option>46</option>
+                    <option>47</option>
+                    <option>48</option>
+                    <option>49</option>
+                    <option>50</option>
+                </select>
+            </h3>
+
+            <h3> Método de pagamento:
+                <select name="payment">
+                    <option>Visa</option>
+                    <option>MasterCard</option>
+                    <option>Multibanco</option>
+                    <option>MBWay</option>
+                </select>
+            </h3>
+
+            <tr th:each="product: ${produto}">
+                <input type="hidden" th:value="${product.name}" name="product"/>
+            </tr>
+            
+            <p>Insira o seu username: <input type="text" name="user"/></p>
+
+            <button type="submit">Adicionar ao carrinho!</button>
+            <p></p>
+        </form>
+    </div>
+
+    <div class = about>
+        <a href = "#"><h1>About this page</h1></a>
+    </div>
+
+</body>
+
+</html>

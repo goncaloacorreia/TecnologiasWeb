@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Nice Kicks! | Sneakers Store</title>
+</head>
+
+<body>
+
+    <div class="cabeçalho">
+        <div buttons>
+            <a href = "login.html"><button id = "loginb" type = "button">Login</button></a>
+            <a href = "orders.html"><button id = "cartb" type = "button"><img src="./imgs/cart.png" id = "buttonimg"></button></a>
+        </div>
+            <a href = "index.html"><img class="logo" src="./imgs/logo.jpeg"></a>
+        <div id ="search">
+            <form method='post' th:action='@{/index}'>
+                <input type="text" name = "search" placeholder="Pesquisar..." id = "barra"/>
+                <button type="submit" id= "button"><img src="./imgs/lupa.png" id = "buttonimg"></button>
+                <a href= "advanced_search.html" id ="pa">Pesquisa Avançada</a>
+            </form>
+        </div>
+    </div>
+
+    <div class = "advanced_search">
+        <h1>Pesquisa Avançada</h1>
+
+        <form method='post' th:action='@{/index1}'>
+                Descrição: <input type = "textarea">
+                <p>Categoria: <select name="marca">
+                            <option value = "Nike">Nike</option>
+                            <option value = "Jordan">Air Jordan</option>
+                            <option value = "Adidas">Adidas</option>
+                            <option value = "Puma">Puma</option>
+                            <option value = "Vans">Vans</option>
+                            <option value = "Balenciaga">Balenciaga</option>
+                            <option value = "NewBalance">New Balance</option>
+                            </select>
+                </p>
+                <p>Preço minimo: <input type = "text" id = "min_price">
+                    Preço máximo: <input type = "text" id = "max_price"> </p>
+                
+                <p>Data de lançamento: <input type="date"></p>
+
+                <p>Data limite de disponibilidade: <input type="date"></p>
+
+                <p>
+                    Localidade: <select name="local">
+                        <option>Évora, Portugal</option>
+                        <option>Lisboa, Portugal</option>
+                        <option>Porto, Portugal</option>
+                        <option>Setubal, Portugal</option>
+                        <option>Nova Iorque, EUA</option>
+                        <option>Estocolmo, Suécio</option>
+                        <option>Londres, Reino Unido</option>
+                        <option>Paris, França</option>
+                        <option>Madrid, Espanha</option>
+                        <option>Sevilha, Espanha</option>
+                    </select>
+                </p>
+
+                <button type="submit">Pesquisar!</button>
+
+            </form>
+        
+    </div>
+
+    <div class = about>
+        <a href = "#"><h1>About this page</h1></a>
+    </div>
+
+</body>
+
+</html>

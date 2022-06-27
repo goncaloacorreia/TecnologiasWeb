@@ -1,0 +1,394 @@
+body
+{
+    background-image: url("back.jpg");
+    max-width: 1028px;
+    
+}
+
+.logo
+{
+    
+    float: left;
+    width: 250px;
+    padding: 25px;
+    
+}
+
+
+#barra
+{
+    
+    width: 45%;
+    font-size: 43px;
+    
+}
+
+#button 
+{
+    margin-top: 120px;
+    height: 54px;
+    width: 54px;
+    background-color: aquamarine;
+    
+}
+
+#buttonimg{
+
+    width: 30px;
+    height: 30px;
+
+}
+
+#pa{
+    font-size: 20px;
+    color:black;
+   
+}
+
+
+.cabeçalho
+{
+    
+    height: 300px;
+    background-color: #FC4445;
+    width: 100%;
+    
+}
+
+.produtos
+{
+    
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid gray;
+    width: 65%;
+    margin-top: 20px;
+    margin-left:20px;
+    margin-bottom: 20px;
+    float:right;
+    
+}
+
+.product1{ /* Produto */
+    padding: 10px;
+    background-color: aquamarine;
+    width: 100%;
+    
+    
+}
+
+.product1 h1 /* Marca/Modelo*/
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+.product2{ /* Produto*/
+    padding-top: 10px;
+    background-color: aquamarine;
+    margin-top: 25px;
+    width: 100%;
+    
+}
+
+
+.product2 h1 /* Marca/Modelo */
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+
+.product3{ /* Produto */
+    padding-top: 10px;
+    background-color: aquamarine;
+    margin-top: 25px;
+    width: 100%;
+    
+}
+
+
+.product3 h1{ /* Marca/Modelo */
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+
+.product4{ /* Produto */
+    padding: 10px;
+    background-color: aquamarine;
+    margin-top: 25px;
+    width: 100%;
+    
+    
+}
+
+.product4 h1 /* Marca/Modelo */
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+.product5{ /* Produto */
+    padding: 10px;
+    background-color: aquamarine;
+    margin-top: 25px;
+    width: 100%;
+    
+}
+
+.p{ /* Imagem */
+    padding: 10px;
+    width: 180px;
+    float:left;
+    border-radius: 25px;
+    
+    
+}
+
+.product5 h1 /* Marca/Modelo */
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.divider
+{   
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-bottom: 2.5px solid gray;
+    width: 100%;
+    
+}
+
+.produtos a { /* Links */
+    color: black;
+}
+
+.about a { /* Links */
+    color: black;
+}
+
+
+.categorias{
+    background-color: #FC4445;
+    width:205px;
+    margin-top: 20px;
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;    
+}
+
+.categorias a{
+    color: black;
+}
+
+.cat3 a{
+    color: white;
+    font-weight: bold;
+}
+
+.about{
+    width: 100%;
+    background-color: white;
+    clear:both;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+}
+
+
+@media screen and (min-width: 690px){
+    .p{
+        width:227px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .p{
+        width:124px;
+    }
+}
+
+
+
+
+.pagination {
+  display: inline-block;
+  background-color: white;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: black;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.advanced_search
+{
+    background-color: aquamarine;
+    border: 5px solid gray;
+    width: 65%;
+    margin-top: 20px;
+    margin-left:20px;
+    margin-bottom: 20px;
+    float: right;
+    height:100%;
+    
+}
+
+.product{
+    background-color: aquamarine;
+    border: 5px solid gray;
+    width: 65%;
+    margin-top: 20px;
+    margin-left:20px;
+    margin-bottom: 20px;
+    height: 100%;
+    float: right;
+}
+
+.p_img{
+    width:300px;
+    float:left;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.p_img h2{
+    clear:left;
+}
+
+.product h3{
+    clear: left;
+    padding-left: 10px;
+}
+
+#botao{
+    font-size:20px;
+    margin-left:10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 750px)
+{
+    .categorias{
+        
+        width:100%;
+        clear: right;
+
+    }
+
+    .produtos{
+        width: 100%;
+    }
+
+    .advanced_search{
+
+        width: 100%;
+    }
+
+    .product{
+
+        width: 100%;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px )
+{
+    .p_img
+    {
+        width: 450px;
+        float: none;
+    }
+}
+
+
+#form {
+    margin-left: 10px;
+}
+
+/* search bar fix*/
+
+
+
+@media screen and (max-width:750px){
+
+    .logo{
+        width:150px;
+        padding-top: 80px;
+    }
+
+    #button{
+        clear:left;
+        width:20px;
+        height:20px;
+        margin-top: 150px;
+    }
+
+    #barra{
+        width:20%;
+        font-size:15px;
+    }
+
+    #pa{
+        font-size:15px;
+    }
+
+    #buttonimg{
+        width:10px;
+        height:10px;
+    }
+}
+
+select#pagamento option[value="visa"]   
+{ 
+    background-image:url(visa.jpg);   
+}
+
+.login
+{
+    background-color: aquamarine;
+    border: 5px solid gray;
+    width: 100%;
+    margin-top: 20px;
+    margin-left:20px;
+    margin-bottom: 20px;
+    height:100%;
+    
+}
+
+#loginb 
+{
+    background-color: aquamarine;
+    float:right;
+    font-size: 29px;
+    margin-top: 5px;
+    margin-right: 5px;
+    
+}
+
+#cartb 
+{
+    background-color: aquamarine;
+    margin-top: 5px;
+    float:right;
+    
+    
+}

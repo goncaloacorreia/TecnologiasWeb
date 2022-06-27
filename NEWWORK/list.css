@@ -1,0 +1,256 @@
+body
+{
+    background-color: #cf210a;
+    
+}
+
+.imagem
+{
+    
+    float: left;
+    width: 250px;
+    padding: 25px;
+    
+}
+
+
+#barra
+{
+    
+    width: 60%;
+    font-size: 50px;
+    
+}
+
+#button 
+{
+    margin-top: 50px;
+    height: 70px;
+    width: 70px;
+    background-color: #cf210a;
+    
+}
+
+#buttonimg{
+
+    width: 70px;
+    height: 70px;
+
+}
+
+#pa{
+    font-size: 25px;
+}
+
+
+.cabeçalho
+{
+    
+    height: 300px;
+    background-color: white;
+    width: 100%;
+    
+}
+
+.produtos
+{
+    
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid gray;
+    width: 85%;
+    margin-top: 20px;
+    margin-left:20px;
+    margin-bottom: 20px;
+    float: right;
+    
+}
+
+.product1{ /* Produto */
+    padding: 10px;
+    background-color: aquamarine;
+    width: 100%;
+    
+    
+}
+
+.product1 h1 /* Marca/Modelo*/
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+.product2{ /* Produto*/
+    padding-top: 10px;
+    background-color: aquamarine;
+    margin-top: 25px;
+    width: 100%;
+    
+}
+
+
+.product2 h1 /* Marca/Modelo */
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+
+.product3{ /* Produto */
+    padding-top: 10px;
+    background-color: aquamarine;
+    margin-top: 25px;
+    width: 100%;
+    
+}
+
+
+.product3 h1{ /* Marca/Modelo */
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+
+.product4{ /* Produto */
+    padding: 10px;
+    background-color: aquamarine;
+    margin-top: 25px;
+    width: 100%;
+    
+    
+}
+
+.product4 h1 /* Marca/Modelo */
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+.product5{ /* Produto */
+    padding: 10px;
+    background-color: aquamarine;
+    margin-top: 25px;
+    width: 100%;
+    
+}
+
+.p{ /* Imagem */
+    padding: 10px;
+    width: 180px;
+    float:left;
+    border-radius: 25px;
+    
+    
+}
+
+.product5 h1 /* Marca/Modelo */
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+.divider
+{   
+    margin-top: 20px;
+    margin-left: 350px;
+    margin-right: 350px;
+    border-bottom: 2.5px solid gray;
+    width: 100%;
+    
+}
+
+a { /* Links */
+    color: black;
+  }
+
+.categorias{
+    background-color: aliceblue;
+    width:205px;
+    margin-top: 25px;
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.cat1
+{
+    color: #cf210a;
+    font-weight: bold;
+}
+
+.cat2
+{
+    color: green;
+    font-weight: bold;
+}
+
+.cat3
+{
+    color:blue;
+    font-weight: bold;
+}
+
+.cat4
+{
+    color: brown;
+    font-weight: bold;
+}
+
+
+
+.about{
+    height: 100%;
+    background-color: white;
+}
+
+@media screen and (min-width: 690px){
+    .p{
+        width:227px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .p{
+        width:124px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .categorias{
+        width:100%;
+        display: flex;
+        
+        
+    }
+
+    .produtos
+    {
+        float: none;
+        width: 100%;
+    }
+}
+
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}

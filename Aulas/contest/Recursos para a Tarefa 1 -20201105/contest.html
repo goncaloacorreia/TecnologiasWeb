@@ -1,0 +1,125 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <meta charset="utf-8" >
+   <title>Contest Entry Form</title>
+   <style type="text/css">
+      ol, ul { 
+     list-style-type: none;
+      }
+
+      h1 {
+        font-family: sans-serif;
+      }
+
+      h2 {
+        font-family: sans-serif;
+      }
+   </style>
+</head>
+
+<body>
+
+<h1>&ldquo;Pimp My Shoes&rdquo; Contest Entry Form</h1>
+
+<p>Want to trade in your old sneakers for a custom pair of Forcefields? Make a case for why your shoes have <em>got</em> to go and you may be one of ten lucky winners.</p>
+
+<p>Contest Entry Information</p>
+
+<form action = "http://localhost:8080" method = "POST">
+
+<ul>
+<li>
+  <label for="name">Name</label>
+  <input type="text" name = "name">
+</li>
+<li>
+  <label for="email">Email</label>
+  <input type="text" name ="email">
+</li>
+<li>
+  <label for="phone">Phone</label>
+  <input type="text" name ="phone">
+</li>
+<li>
+  <label for="birth-date">Birthday</label>
+  <input type="date" name ="birthday">
+</li>
+<p></p>
+<li>
+  <label for="story">My shoes are SO old...</label>
+  <p></p>
+  <textarea rows="4" cols="60" name="story" maxlength="300">
+    No more than 300 characters long
+  </textarea>  
+</li>
+</ul>
+
+<h2>Design your custom Forcefields:</h2>
+
+<p>Custom Shoe Design</p>
+
+<p>Color <em>(choose one)</em>:</p>
+  <ul>
+  <!--<li>
+    <input type="radio" value="red" name="color1" >
+    <label for="color1">Red</label>
+  </li>
+  <li>
+    <input type="radio" value="blue" name="color2" >
+    <label for="color2">Blue</label>
+  </li>
+  <li>
+    <input type="radio" value="black" name="color3" >
+    <label for="color3">Black</label>
+  </li>
+  <li>
+    <input type="radio" value="silver" name="color4" >
+    <label for="color4">Silver</label>
+  </li>-->
+  <li>
+    <input type="color" name ="color">
+  </li>
+  </ul>
+
+<p>Features <em>(Choose as many as you want)</em></p>
+  <ul>
+  <li>
+    <input type="checkbox" value="sparkley laces" name="feature1">
+    <label for="feature1"> Sparkley laces</label>
+  </li>
+  <li>
+    <input type="checkbox" value="metallic logo" name="feature2" checked>
+    <label for="feature2"> Metallic logo</label>
+  </li>
+  <li>
+    <input type="checkbox" value="light-up heels" name="feature3">
+    <label for="feature3"> Light-up heels</label>
+  </li>
+  <li>
+    <input type="checkbox" value="mp3-enabled" name="feature4">
+    <label for="feature4"> MP3-enabled</label>
+  </li>
+  </ul>
+
+<p>Size</p>
+<p>(Sizes reflect standard men's sizes):
+  <select name="size">
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+   </select>
+</p>
+
+<input type ="submit" value = "Pimp My Shoes!">
+<input type="reset" value="Reset">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Nice Kicks! | Sneakers Store</title>
+</head>
+
+<body>
+
+    <div class="cabeçalho">
+        <div buttons>
+            <a href = "login.html"><button id = "loginb" type = "button" >Login</button></a>
+            <button id = "cartb" type = "button"><img src="cart.png" id = "buttonimg"></button>
+        </div>
+        <a href = "index.html"><img class="logo" src="logo.jpeg"></a>
+        <div id ="search">
+            <form action="search.php" method="GET">
+                <input type="text" placeholder="Pesquisar..." id = "barra"/>
+                <button type="submit" id= "button"><img src="lupa.png" id = "buttonimg"></button>
+                <a href= "advanced_search.html" id ="pa">Pesquisa Avançada</a>
+            </form>
+        </div>
+    </div>
+
+    <div class = "advanced_search">
+        <h1>Pesquisa Avançada</h1>
+
+         <form action="search.php" method="GET" id = "form">
+                Descrição: <input type = "text">
+                <p>Categoria <select name="categories">
+                            <option>Nike</option>
+                            <option>Air Jordan</option>
+                            <option>Adidas</option>
+                            <option>Puma</option>
+                            <option>Vans</option>
+                            <option>Balenciaga</option>
+                            <option>New Balance</option>
+                            </select>
+                </p>
+                <p>Preço minimo: <input type = "text" id = "min_price">
+                    Preço máximo: <input type = "text" id = "max_price"> </p>
+                <p>
+                    Localidade: <select name="local">
+                        <option>Évora, Portugal</option>
+                        <option>Lisboa, Portugal</option>
+                        <option>Porto, Portugal</option>
+                        <option>Setubal, Portugal</option>
+                        <option>Nova Iorque, EUA</option>
+                        <option>Estocolmo, Suécio</option>
+                        <option>Londres, Reino Unido</option>
+                        <option>Paris, França</option>
+                        <option>Madrid, Espanha</option>
+                        <option>Sevilha, Espanha</option>
+                        </select>
+                </p>
+                
+                <p>Data de lançamento: <input type="date"></p>
+
+                <p>Data limite de disponibilidade: <input type="date"></p>
+
+                <a href="http://localhost:8080/search.html"><button id = "botao" type="button"> Pesquisar </button></a>
+
+        </form>
+        
+    </div>
+
+    <div class= "categorias">
+        <p><h1>Categorias:</h1></p>
+        
+        <div class = "cat1">
+            <a href="#"><p><h2>Air Jordan</h2></p></a>
+        </div>
+
+        <div class = "cat2">
+            <a href="#"><p><h2>Adidas</h2></p></a>
+        </div>
+
+        <div class = "cat3">
+            <a href="#"><p><h2>Nike</h2></p></a>
+        </div>
+
+        <div class = "cat4">
+            <a href="#"><p><h2>Puma</h2></p></a>
+        </div>
+
+        <div class = "cat5">
+            <a href="#"><p><h2>Vans</h2></p></a>
+        </div>
+
+        <div class = "cat6">
+            <a href="#"><p><h2>New Balance</h2></p></a>
+        </div>
+
+        <div class = "cat7">
+            <a href="#"><p><h2>Balenciaga</h2></p></a>
+        </div>
+    </div>
+
+    <div class = about>
+        <a href = "#"><h1>About this page</h1></a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Nice Kicks! | Sneakers Store</title>
+</head>
+
+<body>
+
+    <div class="cabeçalho">
+        <div buttons>
+            <a href = "login.html"><button id = "loginb" type = "button" >Login</button></a>
+            <button id = "cartb" type = "button"><img src="cart.png" id = "buttonimg"></button>
+        </div>
+        <a href = "index.html"><img class="logo" src="logo.jpeg"></a>
+        <div id ="search">
+            <form action="search.php" method="GET">
+                <input type="text" placeholder="Pesquisar..." id = "barra"/>
+                <button type="submit" id= "button"><img src="lupa.png" id = "buttonimg"></button>
+                <a href= "advanced_search.html" id ="pa">Pesquisa Avançada</a>
+            </form>
+        </div>
+    </div>
+
+    <div class = "login">
+        <form th:action="@{/login}" method="post">
+            <div><label> Utilizador : <input type="text" name="username"/> </label></div>
+            <div><label> Password: <input type="password" name="password"/> </label></div>
+            <div><input type="submit" value="Sign In"/></div>
+        </form>  
+    </div>
+
+
+    <div class = about>
+        <a href = "#"><h1>About this page</h1></a>
+    </div>
